@@ -1,0 +1,3 @@
+[submodule "containers/graph-notebook"]
+	path = containers/graph-notebook
+	url = git@github.com:aws/graph-notebook.git

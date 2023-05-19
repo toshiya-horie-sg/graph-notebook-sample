@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  notebook:
+    build: containers/graph-notebook
+    platform: linux/amd64
+    environment:
+      - GRAPH_NOTEBOOK_HOST=gremlin
+      - NOTEBOOK_PASSWORD=password
+      - PROVIDE_EXAMPLES=0
+      - GRAPH_NOTEBOOK_SSL=False
+    ports:
+      - "8888:8888" # notebook
+      - "8889:8889" # lab
