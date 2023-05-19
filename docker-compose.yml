@@ -12,3 +12,15 @@ services:
     ports:
       - "8888:8888" # notebook
       - "8889:8889" # lab
+#    volumes:
+#      - ./notebooks:/root/notebooks
+    depends_on:
+      - gremlin
+
+  gremlin:
+    image: tinkerpop/gremlin-server:3.4.6
+    platform: linux/amd64
+    expose:
+      - 8182
+    ports:
+      - "8182:8182"
